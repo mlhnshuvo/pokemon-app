@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Navigation start */
+.nav {
+  background-color: darkolivegreen;
+  padding: 20px;
+}
+/* Navigation end */
+
+/* Pokemon start */
+.pokemon__card {
+  border: 2px solid #efefef;
+  background-color: #f1f1f1;
+  width: 70%;
+  margin: 70px auto;
+  height: auto;
+}
+.pokemon__input {
+  padding: 10px 10px;
+  width: 80%;
+  margin-top: 30px;
+}
+.pokemon__input:focus {
+  outline: 0;
+}
+.pokemon__card-img {
+  width: 150px;
+  margin: 15px 0;
+}
+.pokemon__card-hw {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #7492b7;
+  padding: 20px;
+  border-bottom: 1px solid #efefef;
+}
+.pokemon__card-abilities {
+  padding: 15px;
+}
+
+.pokemon__card-abilities {
+  background-color: darkcyan;
+  color: #efefef;
+}
+
+.pokemon__card-name {
+  background-color: #05b7f0;
+  padding: 15px 0px;
+}
+
+.pokemon__card-abilities-layout {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.pokemon__back-btn {
+  padding: 10px 40px;
+  background-color: yellowgreen;
+  cursor: pointer;
+  border: none;
+}
+/* Pokemon end */
+
+/* Pagination start */
+
+.pagination__btn {
+  border: none;
+  background-color: burlywood;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  margin: 55px 0;
+}
+
+/* Pagination end */
+
+/* Limit and Sort start */
+.limitandsort {
+  display: flex;
+  justify-content: space-around;
+}
+.limitandsort__select {
+  background-color: burlywood;
+  outline: 0;
+  padding: 3px 20px;
+  border-radius: 5px;
+}
+.limitandsort__perpage {
+  margin: 10px;
+}
+/* Limit and Sort end */
