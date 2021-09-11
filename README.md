@@ -17,11 +17,10 @@ Technology:
 
 _Note that you will need to have [Node.js](https://nodejs.org) installed._
 
-In backend and frontend just hit...
+Just hit...
 
 ```bash
-npm start
-cd ..
+npm install
 npm start
 ```
 

@@ -42,6 +42,13 @@ const DetailsPokemon = () => {
                       </div>
                     ))}
                   </div>
+                  <div>
+                    <h3>Other detilas</h3>
+                    <hr />
+                    <p>Base experience : {el.base_experience}</p>
+                    <p>Base experience : {el.is_default ? "True" : "False"}</p>
+                    <p>Order : {el.order}</p>
+                  </div>
                 </div>
               </div>
             </div>

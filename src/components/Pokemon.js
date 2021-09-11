@@ -12,11 +12,11 @@ const Pokemon = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="pokemons">
       {pokemon.finalEachPokemon.map((el) => {
         return (
-          <Link to={`/details/` + el.id}>
-            <div className="pokemon__layout">
+          <div className="pokemon__layout">
+            <Link to={`/details/` + el.id} target="_blank" rel="noreferrer">
               <div className="pokemon__card">
                 <img
                   src={el.sprites.other.dream_world.front_default}
@@ -42,8 +42,8 @@ const Pokemon = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         );
       })}
     </div>

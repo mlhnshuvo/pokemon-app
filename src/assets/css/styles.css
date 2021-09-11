@@ -6,7 +6,6 @@
 body {
   box-sizing: border-box;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .container {
@@ -30,24 +29,20 @@ a:hover {
 /* Navigation end */
 
 /* Pokemon start */
+.pokemons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
 .pokemon__card {
-  border: 2px solid #efefef;
-  background-color: #f1f1f1;
-  width: 70%;
-  margin: 70px auto;
-  height: auto;
+  background-color: #efefef;
+  margin: 10px 10px;
+  border: 1px solid #000000;
 }
-.pokemon__input {
-  padding: 10px 10px;
-  width: 80%;
-  margin-top: 30px;
-}
-.pokemon__input:focus {
-  outline: 0;
-}
+
 .pokemon__card-img {
   width: 150px;
-  margin: 15px 0;
+  height: 200px;
 }
 .pokemon__card-hw {
   display: flex;
@@ -74,6 +69,9 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  height: 200px;
+  text-align: justify;
+  gap: 20px;
 }
 
 .pokemon__back-btn {
@@ -81,6 +79,7 @@ a:hover {
   background-color: yellowgreen;
   cursor: pointer;
   border: none;
+  margin-bottom: 30px;
 }
 /* Pokemon end */
 
@@ -96,16 +95,15 @@ a:hover {
 
 .pagination {
   display: flex;
-  justify-content: space-around;
-  margin: 55px 0;
+  margin: 20px 0 10px 0;
+  justify-content: space-between;
 }
-
 /* Pagination end */
 
 /* Limit and Sort start */
 .limitandsort {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .limitandsort__select {
   background-color: burlywood;
@@ -114,6 +112,80 @@ a:hover {
   border-radius: 5px;
 }
 .limitandsort__perpage {
-  margin: 10px;
+  margin: 10px 10px 20px 0;
 }
 /* Limit and Sort end */
+
+/* Auto Suggestions start */
+
+.searchPokemon__input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 40px;
+  outline: 0;
+}
+
+#react-autowhatever-1 {
+  top: 85px;
+  margin: auto;
+}
+
+.react-autosuggest__container {
+  position: relative;
+}
+
+.react-autosuggest__input {
+  width: 240px;
+  height: 30px;
+  padding: 10px 20px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+  outline: none;
+}
+
+.react-autosuggest__input--open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+  display: block;
+  position: absolute;
+  top: 51px;
+  width: 280px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+  background-color: #ddd;
+}
+
+/* Auto Suggestions end */

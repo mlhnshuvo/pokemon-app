@@ -61,10 +61,18 @@ export const performSearch = () => (dispatch) => {
 };
 
 export const sorting = (value) => (dispatch) => {
+  let finalValue = "";
+  const getSort = localStorage.getItem("sort");
+  if (getSort) {
+    finalValue = getSort;
+  } else {
+    finalValue = value;
+  }
+
   dispatch({
     type: Types.sortPokemon,
     payload: {
-      value,
+      value: finalValue,
     },
   });
   dispatch(performSearch());

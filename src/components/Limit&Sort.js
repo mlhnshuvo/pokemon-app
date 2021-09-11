@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allPokemon, sorting } from "../store/actions/pokemonAction";
 
 const LimitSort = () => {
+  const [sort, setSort] = useState();
   const pokemon = useSelector((state) => state.pokemonReducer);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    setSort(localStorage.getItem("sort"));
+    dispatch(sorting(sort));
+  }, [dispatch, sort]);
 
   return (
     <div className="limitandsort">
@@ -14,8 +20,12 @@ const LimitSort = () => {
         </label>
         <select
           name="sort"
+          value={sort}
           className="limitandsort__select"
-          onChange={(e) => dispatch(sorting(e.target.value))}
+          onChange={(e) => {
+            setSort(e.target.value);
+            localStorage.setItem("sort", e.target.value);
+          }}
         >
           <option className="limitandsort__option">Choose an option</option>
           <option value="name" className="limitandsort__option">
