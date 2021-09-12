@@ -15,7 +15,7 @@ const Pokemon = () => {
 		<div className='pokemons'>
 			{pokemon.finalEachPokemon.map((el) => (
 				<div className='pokemon__layout'>
-					<Link to={`/details/${el.id}`} target='_blank' rel='noreferrer'>
+					<Link to={`/details/${el.id}`}>
 						<div className='pokemon__card'>
 							<img
 								src={el.sprites.other.dream_world.front_default}
