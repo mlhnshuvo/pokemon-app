@@ -1,15 +1,13 @@
+import axios from "axios";
 import * as Types from "../constants/types";
-import Axios from "axios";
 
-export const allPokemon =
-  (offset = 0, limit = 0) =>
-  (dispatch) => {
+export const allPokemon = (offset = 0, limit = 0) => (dispatch) => {
     let url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
-    Axios.get(url)
+    axios.get(url)
       .then((allPokemons) => {
         let pokemons = [];
         allPokemons.data.results.forEach((el) => {
-          Axios.get(el.url)
+          axios.get(el.url)
             .then((eachPokemon) => {
               pokemons.push(eachPokemon.data);
               dispatch({
@@ -77,3 +75,4 @@ export const sorting = (value) => (dispatch) => {
   });
   dispatch(performSearch());
 };
+

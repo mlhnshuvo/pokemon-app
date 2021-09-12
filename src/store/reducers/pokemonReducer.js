@@ -7,8 +7,8 @@ let init = {
   finalEachPokemon: [],
   errors: "",
   isLoading: true,
-  offset: "",
-  limit: "",
+  offset: 20,
+  limit: 20,
 };
 
 const pokemonReducer = (state = init, action) => {

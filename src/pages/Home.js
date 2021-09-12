@@ -1,23 +1,21 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import SearchPokemon from "../components/SearchPokemon";
 import LimitSort from "../components/Limit&Sort";
-import Pokeman from "../components/Pokemon";
+import Navigation from "../components/Navigation";
 import Pagination from "../components/Pagination";
+import Pokeman from "../components/Pokemon";
+import SearchPokemon from "../components/SearchPokemon";
 
-const Home = () => {
-  return (
+const Home = () => (
     <div>
-      <Navigation />
-      <div className="container">
-        <SearchPokemon />
-        <Pagination />
-        <LimitSort />
-        <Pokeman />
-        <Pagination />
-      </div>
+        <Navigation />
+        <div className="container">
+            <SearchPokemon />
+            <Pagination />
+            <LimitSort />
+            <Pokeman />
+            <Pagination />
+        </div>
     </div>
-  );
-};
+)
 
 export default Home;
